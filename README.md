@@ -108,3 +108,5 @@ Tests
   NODE_ENV=development npm test
   NODE_ENV=development NODE_DEBUG=request npm test
   ```
+
+License: MIT
