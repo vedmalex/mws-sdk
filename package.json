@@ -9,14 +9,13 @@
     "sellers"
   ],
   "homepage": "http://_",
-  "version": "0.9.22",
+  "version": "1.0.0",
   "author": {
     "name": "Eibbor Srenduas",
     "email": "robbies@eibbors.net",
     "url": "http://eibbors.net"
   },
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Adrian Sanchezdelc",
       "email": "adrian@ticadia.com"
     },
