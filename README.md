@@ -1,24 +1,27 @@
-mws-sdk-promises
+imws
 ======
 
-Originally forked from [ticadia/mws-sdk](https://github.com/ticadia/mws-sdk).
+Originally forked from [vedmalex/mws-sdk](https://github.com/vedmalex/mws-sdk).
+
+Why forked?
+-------------
+The response object made by `xml2js` is
+ - So looooooong
+ - Un-clean `~~~~`
+ - Hard to track ...00.aa444
+ - Tired to access =>.=>.=>.=>
 
 What is done:
 -------------
 
- - It is uses [request](https://www.npmjs.com/package/request). it is more flexible and there is no eventEmitter syntax.
-
- - Promises to provide generic async support.
-
- - I've add some new requests from updated Amazone API.
-
- - I fix it with better set params ability... so it now looks niceier!!!
+ - I fix it with better response format!!!
 
 
-Use it. Contriburte it.
-
-it can be seamlesly used in ES2015/2016 way using [babel.js](https://babeljs.io/).
-with new javascript code features like `yield` or `async` `wait` to put some sugar on your code.
+Installation
+--------
+```
+$ npm i -S imws
+```
 
 Examples
 --------
@@ -26,12 +29,14 @@ Examples
 Initialize
 
 ```javascript
-var MWS = require('mws-sdk-promises'),
+var MWS = require('imws'),
     client = new MWS.Client(
       'accessKeyId',
       'secretAccessKey',
       'merchantId',
       {
+        // target mws host. Default: 'mws.amazonservices.com'
+        host: MWS.Endpoint.jp,
         // Optional Auth Token when using delegated Developer access.
         authToken: 'amzn.mws...',
         // request options (https://github.com/request/request#requestoptions-callback)
@@ -81,6 +86,8 @@ getListOrders(client, {
   CreatedAfter: new Date(2015, 1, 1),
   CreatedBefore: new Date(2015, 1, 31)
 })
+// convert to clean JS Object
+.then(MWS.Orders.responses.ListOrders)
 .catch(function(error) {
   console.error(error);
 })

@@ -1,6 +1,6 @@
 {
-  "name": "mws-sdk-promises",
-  "description": "Amazon Marketplace Web Services client with support for all api calls, using ES6 Promises.",
+  "name": "imws",
+  "description": "Amazon Marketplace Web Services client with support for all api calls, using ES6 Promises with clever output.",
   "keywords": [
     "mws",
     "amazon",
@@ -8,8 +8,8 @@
     "fba",
     "sellers"
   ],
-  "homepage": "http://_",
-  "version": "0.9.22",
+  "homepage": "https://github.com/dominhhai/mws-sdk",
+  "version": "0.0.1",
   "author": {
     "name": "Eibbor Srenduas",
     "email": "robbies@eibbors.net",
@@ -27,6 +27,10 @@
     {
       "name": "Alex I. Vedmedenko",
       "email": "vedmalex@gmail.com"
+    },
+    {
+      "name": "Do Minh Hai",
+      "email": "minhhai3b@gmail.com"
     }
   ],
   "main": "./lib/mws",
@@ -35,10 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vedmalex/mws-sdk.git"
+    "url": "https://github.com/dominhhai/mws-sdk.git"
   },
   "dependencies": {
-    "bluebird": "3.4.1",
     "request": "^2.60.0",
     "underscore": "^1.8.3",
     "xml2js": "^0.4.12"
@@ -51,6 +54,6 @@
     "test": "mocha -t 5000"
   },
   "bugs": {
-    "url": "https://github.com/ticadia/mws-sdk/issues"
+    "url": "https://github.com/dominhhai/mws-sdk/issues"
   }
 }

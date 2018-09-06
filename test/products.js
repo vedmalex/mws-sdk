@@ -35,7 +35,7 @@ describe('Products', function() {
       env.MarketPlaceId);
 
     client = new MWS.Client(env.AccessKey, env.SecretKey, env.MerchantId, {
-      host: 'mws.amazonservices.in'
+      host: MWS.Endpoint.in
     });
   });
 

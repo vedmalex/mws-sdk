@@ -3,13 +3,13 @@ var MWS = require('../');
 var env = process.env;
 
 describe('Orders', function() {
-  var MarketPlaceId = 'ATVPDKIKX0DER';
+  var MarketPlaceId = MWS.MarketplaceId.us;
   var client;
   it('should set up client', function() {
     client = new MWS.Client(env.AccessKey, env.SecretKey, env.MerchantId, {});
   });
 
-  
+
   it('list orders command', function (done) {
     var listOrders = MWS.Orders.requests.ListOrders({ "marketplaceId": MarketPlaceId });
     listOrders.params.MarketplaceId.value = MarketPlaceId;
@@ -20,7 +20,7 @@ describe('Orders', function() {
       done();
     });
   });
-  
+
   it('get single order', function(done){
     var getOrder = MWS.Orders.requests.GetOrder();
     console.log(getOrder);
