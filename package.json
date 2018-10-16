@@ -26,6 +26,10 @@
     {
       "name": "Alex I. Vedmedenko",
       "email": "vedmalex@gmail.com"
+    },
+    {
+      "name": "PHaroZ",
+      "email": "github@pharoz.net"
     }
   ],
   "main": "./lib/mws",
