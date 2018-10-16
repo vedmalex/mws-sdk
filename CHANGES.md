@@ -1,5 +1,9 @@
 # Changes:
 
+## 2018/10/16 ver 1.1.0
+
+Add Finances API support #24 by [PHaroZ](https://github.com/PHaroZ)
+
 ## 2018/09/01 ver 1.0.0
 
 update license and make it release version
