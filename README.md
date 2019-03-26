@@ -71,6 +71,41 @@ function getListOrders(client, args) {
 
 ```
 
+```javascript
+//Sample of PutTransportContent API
+function putTransportContent(client, args) {
+  const request = new MWS.Fbs.requests.inbound.PutTransportContent();
+
+  request.set('ShipmentId', args.shipmentId);
+  request.set('IsPartnered', args.isPartnered);
+  request.set('ShipmentType', args.shipmentType);
+
+  const {
+    contact,
+    boxCount,
+    sellerFreightClass,
+    freightReadyDate,
+    palletList,
+    totalWeight,
+    sellerDeclaredValue
+  } = args.partneredLtlData;
+
+  const pLtlData = new MWS.Fbs.complex.PartneredLtlData(
+    contact,
+    boxCount,
+    sellerFreightClass,
+    freightReadyDate,
+    palletList,
+    totalWeight,
+    sellerDeclaredValue
+  );
+
+  request.set('NonPartneredSmallParcelData', pLtlData);
+
+  return client.invoke(req);
+}
+```
+
 Use it.
 
 ```javascript
