@@ -1,5 +1,10 @@
 # Changes:
 
+## 2019/05/02 ver 1.2.0
+
+merge PR #25 by [waqas487](https://github.com/waqas487) 
+merge PR #26 by [Mikhail Siauko](https://github.com/buticm)
+
 ## 2018/10/16 ver 1.1.0
 
 Add Finances API support #24 by [PHaroZ](https://github.com/PHaroZ)
